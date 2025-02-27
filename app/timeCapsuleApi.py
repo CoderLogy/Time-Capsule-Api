@@ -92,7 +92,7 @@ def get_capsule(capsule_id:str):
     date is greater than or equal to the `open_date` of the capsule, then the message inside that
     capsule is returned in a dictionary format like {"message": capsule["message"]}.
     """
-    for capsule in capsuewles:
+    for capsule in capsules:
         if capsule["capsule_id"] == capsule_id:
             if datetime.strptime(capsule["open_date"],"%Y-%m-%d") <= datetime.today():
                 return {"message":capsule["message"]}
