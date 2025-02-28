@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose port 8000 for FastAPI
-EXPOSE 41374
+EXPOSE 45459
 
 # Define the command to run the FastAPI app using Uvicorn
-CMD ["fastapi", "run", "app/timeCapsuleApi.py", "--proxy-headers", "--port", "41374"]
+CMD ["python", "-m", "uvicorn", "timeCapsuleApi:app", "--port", "45459", "--proxy-headers"]
